@@ -32,7 +32,7 @@
 
 		// Function to add coffee shops
 		function addCoffeeShops(){
-			$.getJSON("data/coffee_cafes.js",function(data){
+			$.getJSON("data/coffee_cafes.geojson",function(data){
 			    // set coffeeShops to GeoJSON, add GeoJSON layer to the map once the file is loaded
 			    coffeeShopPoints = L.geoJson(data,{
 					onEachFeature: function (feature, layer) {
@@ -74,7 +74,7 @@
 		// Use $( "elementID") and the jQuery click listener method filter Starbucks
 		$( "#filterSBux" ).click(function() {
 			removeCoffeeShops();
-		    $.getJSON("data/coffee_cafes.js",function(data){
+		    $.getJSON("data/coffee_cafes.geojson",function(data){
 		        // add GeoJSON layer to the map once the file is loaded
 		        coffeeShopPoints = L.geoJson(data,{
 					onEachFeature: function (feature, layer) {
@@ -89,7 +89,7 @@
 		// Use $( "elementID") and the jQuery click listener method filter Starbucks
 		$( "#filterDD" ).click(function() {
 			removeCoffeeShops();
-		    $.getJSON("data/coffee_cafes.js",function(data){
+		    $.getJSON("data/coffee_cafes.geojson",function(data){
 		        // add GeoJSON layer to the map once the file is loaded
 		        coffeeShopPoints = L.geoJson(data,{
 					onEachFeature: function (feature, layer) {
